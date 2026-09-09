@@ -1,0 +1,16 @@
+frontend:
+  image: oxpsj0/three-tier-frontend:v2
+  replicas: 3
+  nodePort: 30080
+
+backend:
+  image: oxpsj0/three-tier-backend:v2
+  replicas: 3
+
+db:
+  image: mysql:8.0
+  storage: 10Gi
+  rootPassword: example
+  database: namesdb
+  user: app_user
+  password: app_pass

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: my-three-tier-app
+description: Three-tier website - nginx frontend, Flask backend, MySQL database
+type: application
+version: 0.1.0
+appVersion: "2"
