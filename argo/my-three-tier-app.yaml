@@ -6,17 +6,18 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:0xPsj0/my-three-tier-app.git
-    targetRevision: HEAD
-    path: my-three-tier-app
+    repoURL: https://github.com/0xPsj0/my-three-tier-app.git
+    targetRevision: main
+    path: .
     helm:
-      releaseName: my-three-tier-app
       valueFiles:
-        - values-prod.yaml
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: 3-tier-website-ns
-  syncPolicy:
+    syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
