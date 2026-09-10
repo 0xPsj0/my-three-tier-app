@@ -1,6 +1,6 @@
 frontend:
   image: oxpsj0/three-tier-frontend:v2
-  replicas: 2
+  replicas: 4
   nodePort: 30080
 
 backend:
